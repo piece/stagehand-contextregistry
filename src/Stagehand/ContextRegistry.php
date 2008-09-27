@@ -65,8 +65,6 @@ abstract class ContextRegistry
      * @access protected
      */
 
-    protected static $contextStack = array();
-
     /**#@-*/
 
     /**#@+
