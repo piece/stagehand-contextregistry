@@ -37,8 +37,6 @@
 
 namespace Stagehand;
 
-use Stagehand::IContext;
-
 // {{{ Stagehand::ContextRegistry
 
 /**
@@ -103,7 +101,7 @@ abstract class ContextRegistry
     public static function clear()
     {
         foreach (static::$contextStack as $context) {
-            $context->clear();
+            unset($context);
         }
 
         static::$contextStack = array();
@@ -115,9 +113,9 @@ abstract class ContextRegistry
     /**
      * Sets a context object as the current context.
      *
-     * @param Stagehand::IContext $context
+     * @param mixed $context
      */
-    public static function setContext(IContext $context)
+    public static function setContext($context)
     {
         array_push(static::$contextStack, $context);
     }
@@ -135,7 +133,7 @@ abstract class ContextRegistry
             return;
         }
 
-        $context->clear();
+        unset($context);
         array_pop(static::$contextStack);
     }
 
