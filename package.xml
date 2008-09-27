@@ -14,7 +14,7 @@
   <active>yes</active>
  </lead>
  <date>2008-09-27</date>
- <time>18:59:31</time>
+ <time>23:49:17</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -35,9 +35,6 @@
    <dir name="src">
     <dir name="Stagehand">
      <file name="ContextRegistry.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file name="IContext.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
     </dir> <!-- /src/Stagehand -->
